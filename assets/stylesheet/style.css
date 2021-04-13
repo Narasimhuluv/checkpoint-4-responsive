@@ -1,0 +1,1128 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: 'Raleway', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ---------------------Custom Styles */
+
+.container{
+    max-width: 1500px;
+    width: 100%;
+    margin: auto;
+    /* border: 1px solid red; */
+}
+.flex{
+    display: flex;
+}
+.justify_between{
+    justify-content: space-between;
+}
+.justify_center{
+    justify-content: center;
+}
+.align_center{
+    align-items: center;
+}
+.flex_48{
+    flex: 0 1 48%;
+}
+.flex_28{
+    flex: 0 1 28%
+}
+.flex_25{
+    flex: 0 1 25%;
+}
+.flex_20{
+    flex: 0 1 20%;
+}
+.flex_40{
+    flex: 0 1 40%;
+}
+.flex_30{
+    flex: 0 1 30%;
+}
+.flex_23{
+    flex: 0 1 23%;
+}
+a{
+    text-decoration: none;
+}
+.padding{
+    padding: 1rem 0;
+}
+.section_padding{
+    padding: 5rem 0;
+}
+.active{
+    color: orangered;
+}
+.width_full{
+    width: 100%;
+}
+/* ----------------------------------header section--- */
+.bars,.cross{
+    display: none;
+}
+.header .nav input{
+    width: 0;
+}
+
+.header{
+    width: 100%;
+    background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.233);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+.heading{
+    font-size: 3rem;
+    font-weight: 900;
+    color: rgb(97, 97, 97);
+}
+.header .nav li{
+    margin-left: 2.5rem;
+}
+.header a{
+    color: gray;
+}
+/* .header select{
+    width: 9rem;
+    color: grey;
+    outline: none;
+    cursor: pointer;
+} */
+.drop_down_data{
+    position: absolute;
+    background-color: white;
+    display: none;
+    animation: display 0.5s linear;
+}
+@keyframes display{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+.header_down:hover + .drop_down_data{
+    display: block;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    margin-left: -1rem;
+}
+.drop_down_data:hover{
+    display: block;
+    flex-direction: column;
+    margin-left: -1rem;
+}
+.drop_down_data a{
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    display: block;
+}
+.header .inside_down{
+    right: -12rem;
+    margin-top: -3rem;
+}
+.header .active{
+    color: orangered;
+}
+.header a:hover{
+    color: orangered;
+}
+/* ----------------------------hero section */
+
+.hero_bg{
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)) ,url(../media/hero-bg.jpg) no-repeat;
+    background-size: cover;
+    height: 70vh;
+}
+.hero_heading{
+    font-size: 4rem;
+    color: white;
+    font-weight: 900;
+    letter-spacing: 0.3rem;
+}
+.hero .para{
+    font-size: 1.5rem;
+    color: white;
+    margin: 1rem 0;
+}
+.get_started{
+    width: 13rem;
+    height: 3rem;
+    position: relative;
+    margin-top: 4rem;
+}
+.hero .icon i{
+    background-color: orangered;
+    padding: 1.3rem;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    z-index: 5;
+}
+.hero .icon a{
+    background-color: rgba(0, 0, 0, 0.322);
+    position: absolute;
+    color: white;
+    left: 2.0rem;
+    z-index: 0;
+    top: 0.45rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    padding: 0.8rem 2rem;
+    transition: all 0.5s ease;
+}
+.hero .icon a:hover{
+    background-color: rgba(255, 68, 0, 0.623);
+    color: white;
+}
+/* ------------------------------company website */
+.company_website .container{
+    position: relative;
+    top: -10rem;
+}
+.big_card{
+    border: 1px solid orangered;
+    background-color: orangered;
+    padding: 4rem 1.5rem;
+}
+.company_website .big_card .heading{
+    font-size: 2.0rem;
+    color: white;
+    line-height: 1.3;
+}
+.company_website .para{
+    margin: 2rem 0 ;
+    line-height: 1.3;
+    color: white;
+    padding-right: 2.2rem;
+}
+.learn_more{
+    text-align: center;
+    margin-top: 4rem;
+}
+ .learn_more a{
+    background-color: rgba(255, 255, 255, 0.247);
+    padding: 0.8rem 2.6rem;
+    border-radius: 2rem;
+    color: white;
+    transition: all 0.5s ease-in;
+}
+.learn_more a:hover{
+    background-color: white;
+    color: orangered;
+}
+.card{
+    border: 1px solid rgba(128, 128, 128, 0.418);
+    text-align: center;
+    padding: 4.5rem 0.5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: -1px -1px 5px rgba(255,255,255,0.3),
+                3px 3px 5px rgba(0,0,0,0.2);
+}
+.card i{
+    font-size: 2.5rem;
+    color: orangered;
+}
+.card h3{
+    color: rgba(0, 0, 0, 0.685);
+    margin: 1.5rem 0;
+    font-size: 1.9rem;
+    font-weight: 900;
+}
+.card p{
+    line-height: 1.5;
+}
+/* ----------------------------about section */
+.about_us{
+    margin-top: -6rem;
+    background-color: rgb(254,249,247);
+}
+.aboutus_left{
+    background: url(../media/about-img.jpg) no-repeat; 
+    background-size: cover;
+    height: 80vh;
+}
+.aboutus_left .icon{
+    border: 20px solid rgba(255, 68, 0, 0.39);
+    border-radius: 50%;
+}
+.aboutus_left .icon i{
+    color: white;
+    padding: 1.5rem;
+    background-color: orangered;
+    /* outline: 1px solid orangered; */
+    border-radius: 50%;
+}
+
+.aboutus_right{
+    margin-left: 5rem;
+}
+.aboutus_right .heading{
+    font-size: 2rem;
+    margin: 1rem 0;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.822);
+}
+.aboutus_right .para, .service .para{
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+.aboutus_item{
+    margin-top: 4.5rem;
+    cursor: pointer;
+}
+.aboutus_item i{
+    padding: 1rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: orangered;
+    border: 1px solid rgba(255, 68, 0, 0.281);
+    box-shadow: -1px -1px 3px rgba(255,255,255,0.6),
+                1px 1px 3px rgba(0,0,0,0.4);
+}
+.aboutus_item:hover i{
+    background-color: orangered;
+    color: white;transition: all 0.5s ease-in;
+    cursor: pointer;
+}
+.aboutus_item .item_exp{
+    margin-left: 1rem;
+}
+.aboutus_item .item_exp h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.item_exp h3:hover{
+    color: orangered;
+}
+.item_exp p{
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+/* ----------------------------brands section */
+
+.brand_gallery{
+    padding: 3rem 0;
+}
+.brand_gallery img{
+    filter: grayscale(100%);
+    width: 10rem;
+}
+.brand_gallery img:hover{
+    filter: unset;
+    cursor: pointer;  
+}
+.dot{
+    background-color: #FF5821;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+}
+.dot_active{
+    background-color: rgba(255, 255, 255, 0.849);
+}
+.dot_active_new{
+    background-color: rgba(128, 128, 128, 0.664);
+}
+/* ---------------------------------service section */
+.service .heading , .portfolio .heading,
+.team .heading, .pricing .heading, .f_a_q .heading, .contact .heading,
+.blog .heading{
+    text-align: center;
+    color: rgba(0, 0, 0, 0.795);
+    font-size: 2.5rem;
+}
+.service .para, .value_data .para, .portfolio .para,
+.team .para, .pricing .para, .f_a_q .para, .contact .para, .blog .para{
+    text-align: center;
+    margin-top: 1rem;
+    line-height: 1.8;
+}
+.service{
+    background-color: rgb(254,249,247);
+}
+.service .cards{
+    flex-wrap: wrap;
+}
+.service .card i{
+    position: absolute;
+    top: -1.5rem;
+    margin-left: -30px;
+    font-size: 1.3rem;
+    background-color: orangered;
+    border-radius: 50%;
+    padding: 1.1rem 1rem;
+    color: white;
+}
+.service .card{
+    padding: 2rem 1rem;
+    position: relative;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+.service .card h3, .karlis_article h3{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.service .card:hover h3{
+    color: orangered;
+    transition: all 0.5s ease;
+}
+.service .card:hover i{
+    background-color: white;
+    color: orangered;
+    border: 1px solid orangered;
+    transition: all 0.5s ease;
+}
+/* ---------------------------values article section */
+.values_content{
+    flex-wrap: wrap;
+}
+.values .article{
+    background: url(../media/values-1.jpg) no-repeat;
+    background-size: cover;
+    height: 30vh;
+    border-radius: 0.3rem;
+}
+.values .article_2{
+    background: url(../media/values-2.jpg) no-repeat;
+    background-size: cover ;
+}
+.values .article_3{
+    background: url(../media/values-3.jpg) no-repeat;
+    background-size: cover ;
+}
+.values .article_4{
+    background: url(../media/values-4.jpg) no-repeat;
+    background-size: cover ;
+}
+.values .article{
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 3rem;
+}
+.values .value_data{
+    padding: 2rem;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.815);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.values .value_data h4{
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.value_data .para{
+    text-align: left;
+    margin: 1rem 0;
+    color: rgb(56, 54, 54);
+    line-height: 1.5;
+}
+.value_data .para:hover{
+    color: white;
+}
+.values .value_data a{
+   color: grey;
+   text-transform: uppercase;
+   font-size: 0.8rem;
+}
+.value_data:hover h4, .value_data:hover a ,.value_data:hover .para{
+    color: white;
+    transition: all 0.3s ease-in;
+}
+.value_data:hover{
+    background-color: orangered;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+/* -----------------------------jena karlis article section */
+.jena_karlis_article{
+    background:linear-gradient(rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.733)) ,url(../media/testimonials-bg.jpg) no-repeat;
+    background-size: cover;
+    height: 50vh;
+}
+.karlis_article{
+    text-align: center;
+    color: white;
+    line-height: 1.5;
+}
+.karlis_article img{
+    width: 8rem;
+    border-radius: 50%;
+    border: 1rem solid rgba(255, 255, 255, 0.287);
+}
+.karlis_article blockquote{
+    font-size: 1.3rem;
+    line-height: 1.8;
+}
+.karlis_article blockquote i{
+    font-size: 2rem;
+    color: grey;
+}
+/* -------------------------------portfolio section */
+.portfolio .category{
+    text-align: center;
+    margin: 2rem 0;
+}
+.portfolio .category a{
+    padding: 0.3rem 1rem;
+    border-radius: 2rem;
+    margin-left: 1rem;
+    color: black;
+    font-weight: 600;
+}
+.portfolio .category .active{
+    background-color: rgba(255, 68, 0, 0.144);
+}
+.portfolio .category a:hover{
+    background-color: rgba(255, 68, 0, 0.144);
+}
+.portfolio_gallery{
+    flex-wrap: wrap;
+}
+.each_gallery{
+    position: relative;
+    margin-top: 3.5rem;
+}
+.portfolio_gallery .each_gallery img{
+    width: 100%;
+}
+.portfolio .data{
+    width: 100%;
+    position: absolute;
+    bottom: 1.2rem;
+    z-index: 9;
+}
+.portfolio .inside_data{
+    width: 80%;
+    padding: 1rem 2rem;
+    background-color: white;
+    display: none;
+    color: grey;
+}
+.portfolio .each_gallery:hover .inside_data{
+    display: block;
+    margin: auto;
+    display: inline-flex;
+    cursor: pointer;
+    animation: display 0.4s linear;
+}
+.portfolio .data_left h3{
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.portfolio .data_right i{
+    margin-left: 0.8rem;
+}
+.portfolio .data_right i:hover{
+    color: orangered;
+    cursor: pointer;
+}
+/* --------------------------team section */
+.team{
+    background-color: rgb(255,249,247);
+}
+.team .profiles{
+    text-align: center;
+    line-height: 1.8;
+    margin-top: 1.5rem;
+}
+.team .profiles img{
+    width: 100%;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.team .profiles small{
+    font-size: 0.8rem;
+}
+.team .profiles .profile{
+    position: relative;
+}
+.team .profile{
+    box-shadow: -1px -1px 3px rgba(255,255,255,0.6),
+    1px 1px 3px rgba(0,0,0,0.4);
+    padding-bottom: 1.3rem;
+    border-radius: 1rem;
+}
+.profiles  .profile .nav{
+    width: 100%;
+    position: absolute;
+    bottom: 4.8rem;
+    font-size: 1.4em;
+    justify-content: space-evenly;
+    background-color: rgba(255, 255, 255, 0.534);
+    padding: 0.6rem 0;
+    display: none;
+    cursor: pointer;
+}
+.team .profile .nav i{
+    margin-left: 1rem;
+    color: rgba(0, 0, 0, 0.671);
+    transition: all 0.2s ease-in;
+}
+.team .profile:hover .nav{
+    display: block;
+    animation: display 0.5s linear;
+}
+.team .profile .nav i:hover{
+    transform: scale(1.1);
+    color: orangered;
+}
+/* ------------------------pricing section----- */
+.pricing .cards{
+    margin-top: 4rem;
+}
+.pricing  .cards .category{
+    width: 100%;
+    padding: 1.3rem 0;
+    background-color: rgb(248,248,248);
+    font-weight: 900;
+}
+.pricing .price_card{
+    text-align: center;
+    position: relative;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    box-shadow: -1px -1px 3px rgba(255,255,255,0.6),
+                1px 1px 3px rgba(0,0,0,0.4)
+}
+.pricing .price_card .middle{
+    margin-top: 2rem;
+    padding: 2rem 0;
+}
+.pricing .price_card:hover .category{
+    background-color: orangered;
+    color: white;
+    animation: display 0.5s ease-in;
+}
+.pricing .price_card .business{
+    background-color: orangered;
+    color: white;
+}
+.price_card ul li{
+    margin-top: 1.3rem;
+}
+.price_card .active{
+    font-size: 2.5rem;
+    color: orangered;
+    font-weight: 900;
+}
+.price_card .active_grey{
+    color: rgba(128, 128, 128, 0.753);
+}
+.price_card footer{
+    padding: 1.3rem 0;
+    margin-top: 1.3rem;
+    width: 100%;
+    background-color: rgb(248,248,248);
+}
+ footer .buy_read{
+    color: white;
+    padding: 0.5rem 1.5rem;
+    background-color: orangered;
+    border-radius: 0.3rem;
+}
+.price_card .overline{
+    text-decoration: line-through;
+    color: grey;
+}
+/* --------------------------------f_a_q section */
+.f_a_q{
+    background-color: rgb(255,249,247);
+}
+.f_a_q .drop_down{
+    width: 70%;
+    margin: auto;
+}
+.drop_down .drop_down_each{
+    margin-top: 2rem;
+    background-color: white;
+}
+.drop_down  select{
+    width: 100%;
+    height: 4rem;
+    padding: 0rem 2rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    outline: none;
+}
+.drop_down select:hover{
+    color: orangered;
+    font-weight: 700;
+}
+.drop_down select option{
+    border: none;
+    height: 23rem;
+    background: none;
+}
+/* ------------------------------contact section */
+.contact .detailes{
+    width: 70%;
+    margin: auto;
+    margin-top: 2rem;
+}
+.contact address{
+    padding: 1.5rem 1rem;
+    border: 1px solid rgba(128, 128, 128, 0.137);
+    box-shadow: -1px -1px 3px rgba(255,255,255,0.6),
+                1px 1px 3px rgba(0,0,0,0.4);
+}
+.contact .detailed_address{
+    margin-left: 1.2rem;
+    line-height: 1.5;
+}
+.detailed_address h3{
+    font-weight: 900;
+}
+.contact .rotate_icon{
+    transform: rotate(-50deg);
+}
+.contact address .icon i{
+    padding: 1rem 1.1rem;
+    border: 2px dotted orangered;
+    border-radius: 50%;
+    color: orangered;
+    font-size: 1.5rem;
+    box-shadow: -1px -1px 3px rgba(255,255,255,0.6),
+                1px 1px 3px rgba(0,0,0,0.4);
+}
+.contact form{
+    padding: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    box-shadow: -1px -1px 3px rgba(255,255,255,0.6),
+                1px 1px 3px rgba(0,0,0,0.4);
+}
+.contact form input{
+    width: 46%;
+    height: 2.5rem;
+    margin-top: 2rem;
+    padding-left: 1rem;
+}
+.contact form .full_length{
+    width: 1000%;
+}
+.contact form .full_length_message{
+    width: 100%;
+    margin-top: 2rem;
+    padding-left: 1rem;
+    height: 10rem;
+}
+.contact form .btn{
+    margin: auto;
+    margin-top: 2rem;
+    background: none;
+    border: none;
+    background-color: orangered;
+    color: white;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+}
+/* -------------------------links section */
+.links{
+    background-color: rgb(255,249,247);
+}
+.links p{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+.links ul{
+    margin-top: 1.3rem;
+}
+.links li{
+    list-style: none;
+}
+.links li{
+    margin-top: 1rem;
+}
+.links .phone_details{
+    margin-top: 2rem;
+}
+.links ul li strong{
+    font-weight: 900;
+}
+.links li i{
+    color: orangered;
+}
+.links li a{
+    color: grey;
+}
+.links input{
+    width: 100%;
+    height: 2.5rem;
+    border: none;
+    border: 1px solid grey;
+    border-radius: 1.5rem;
+    outline: none;
+    padding-left: 1rem;
+}
+.links .input_fied{
+    margin-top: 2rem;
+}
+.links .sub_para{
+    line-height: 1.8;
+}
+.links .subscribe{
+    background-color: orangered;
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    position: relative;
+    color: white;
+    left: -2.5rem;
+}
+/* ----------------------------footer section */
+footer{
+    position: relative;
+    padding: 1.5rem 0;
+}
+footer .left{
+    line-height: 1.8;
+}
+footer .left .bold{
+    font-weight: 900;
+}
+footer .left .active{
+    color: orangered;
+}
+footer .nav a, .top_arrow a{
+    margin-left: 0.6rem;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+    background-color: orangered;
+    color: white;
+    border-radius: 50%;
+}
+.top_arrow {
+    position: fixed;
+    right: 6rem;
+    bottom: 4.6rem;
+}
+.top_arrow a{
+    position: absolute;
+    border-radius: 0.5rem;
+}
+/* ----------------------------------------------------blog page */
+/* -------------------------navigate section */
+.navigate{
+    margin-top: 5.4rem;
+    background-color: rgb(244,242,242);
+}
+.navigate .heading{
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+/* -----------------------blog section */
+.blog .heading{
+    font-size: 1.3rem;
+    margin-top: 1.3rem;
+    text-align: left;
+    padding: 0 0.8rem;
+}
+.blog .each_gallery{
+    box-shadow: -1px -1px 3px rgba(255,255,255,0.6),
+                1px 1px 3px rgba(0,0,0,0.4);
+}
+.blog .details{
+    margin-top: 1.2rem;
+    padding: 0 0.8rem;
+    color: grey;
+}
+.blog time{
+    margin-left: 1rem;
+}
+.blog .para{
+    text-align: left;
+    padding: 0 0.8rem;
+    line-height: 1.4;
+}
+.blog footer .buy_read{
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+.blog .each_gallery .read{
+    justify-content: flex-end;
+}
+.blog .cards{
+    flex-wrap: wrap;
+}
+/* ----------------navigate pages section */
+.page_numbers{
+    text-align: center;
+}
+.page_number{
+    padding: 0.6rem 1rem;
+    border: 1px solid grey;
+    color: grey;
+    margin: 0.2rem;
+}
+.page_number:hover{
+    background-color: orangered;
+    color: white;
+    transition: all ease-in 0.5s;
+}
+.page_numbers .active{
+    background-color: orangered;
+    color: white;
+}
+/* --------------------------------------------------layout completed */
+
+/* -----------------------------------Responsive web design */
+
+@media screen and (max-width: 768px){
+    html{
+        font-size: 12px;
+        animation: display 0.5s linear;
+    }
+    .header .nav .items{
+        width: 100%;
+        height: 100vh;
+        background: #83a4d4;  
+        background: -webkit-linear-gradient(to right, #b6fbffc2, #83a3d4b4);  
+        background: linear-gradient(to right, #b6fbff, #83a3d4ea); 
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        text-align: center;
+        display: none;
+        padding-top: 32%;
+    }
+    .header .nav li{
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+    .header .nav a{
+        color: white;
+    }
+    .header .nav .active{
+        color: orangered;
+    }
+    .header .nav input{
+        width: 0;
+    }
+    .bars, .cross{
+        display: block;
+    }
+    #toggle:checked ~ .items{
+        display: inline-block;
+        animation: display 0.5s linear;
+    }
+    .header .nav .items .cross{
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+    }
+    .drop_down_data{
+        background: none;
+        right: 12rem;
+        bottom: 30rem;
+    }
+    .header .nav .bars{
+        font-size: 2rem;
+        position: relative;
+        top: 1rem;
+        cursor: pointer;
+    }
+    .container{
+        width: 90%;
+        margin: 0rem 2rem;
+        margin: auto;
+    }
+    .flex_20, .flex_23, .flex_28, .flex_30, .flex_40, .flex_48{
+        flex: 0 1 100%;
+    }
+    .flex_20{
+        margin-top: 2rem;
+        padding: 2.5rem 6rem;
+    }
+    .flex_wrap{
+        flex-wrap: wrap;
+    }
+    .column{
+        flex-direction: column;
+    }
+    .about_us .flex_40{
+        height: 60vh;
+    }
+    .about_us .flex_48{
+        margin-left: 0;
+    }
+    .aboutus_right{
+        margin-top: 3rem;
+    }
+    .brand_gallery img{
+        margin-top: 2rem;
+    }
+    .brand_hide{
+        display: none;
+    }
+    .service .flex_30{
+        flex: 0 1 44%;
+    }
+    .portfolio_gallery .flex_30{
+        flex: 0 1 48%;
+    }
+    .team .flex_23, .pricing .flex_23{
+        flex: 0 1 48%;
+        margin-top: 2rem;
+    }
+    .pricing .flex_23 .middle{
+        padding: 5rem 0;
+    }
+    .values .article{
+        margin: auto;
+        margin-top: 2rem;
+    }
+    .values .flex_48{
+        flex: 0 1 45%;
+        margin-top: 1rem;
+    }
+    .contact .detailes{
+        width: 90%;
+    }
+    .contact .flex_28{
+        flex: 0 1 100%;
+        margin-top: 2rem;
+    }
+    .links .flex_23{
+        flex: 0 1 48%;
+        margin-top: 3rem;
+        justify-content: center;
+    }
+    .links .newsletter{
+        margin-top: 3rem;
+    }
+    footer .nav{
+        margin-top: 2rem;
+    }
+    
+}
+@media screen and (max-width:375px) {
+    html{
+        font-size: 10px;
+    }
+    .flex_20, .flex_23, .flex_28, .flex_30, .flex_40, .flex_48{
+        flex: 0 1 100%;
+    }
+    .about_us .flex_48{
+        margin-left: 0;
+    }
+    .brands .mid_screen_hide{
+        display: none;
+    }
+    .brands img{
+        margin: 0 3rem;
+        text-align: center;
+    }
+    .service .flex_30, .portfolio .flex_30{
+        flex: 0 1 100%;
+    }
+    .service .flex_30 i{
+        margin-left: -1.3rem;
+    }
+    .values .flex_48{
+        flex: 0 1 100%;
+        margin-top: 3rem;
+    }
+    .team .flex_23, .pricing .flex_23{
+        flex: 0 1 100%;
+    }
+    .contact form input{
+        width: 100%;
+    }
+    .links .flex_23{
+        flex: 0 1 100%; 
+        margin: auto;
+        margin-top: 3rem;
+    }
+    .links .links_sub{
+        justify-content: center;
+    }
+
+}
+@media screen and (max-width:420px) {
+    html{
+        font-size: 10px;
+    }
+    .flex_20, .flex_23, .flex_28, .flex_30, .flex_40, .flex_48{
+        flex: 0 1 100%;
+    }
+    .service .flex_30, .values .flex_48, .portfolio .flex_30,
+    .team .flex_23, .pricing .flex_23, .links .flex_23{
+        flex: 0 1 100%;
+    }
+    .service .flex_30 i{
+        margin-left: -1.1rem;
+    }
+    .contact form input{
+        width: 100%;
+    }
+    .pixel_2xl{
+        display: none;
+    }
+
+}
+
